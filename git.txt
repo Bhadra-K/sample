@@ -1,4 +1,5 @@
-Push a file
+---> Push a file
+
 C030@C088 MINGW64 ~
 $ cd bdr
 
@@ -85,7 +86,8 @@ $
 
 
 
-Delete a file 
+---> Delete a file 
+
 C030@C088 MINGW64 ~/bdr/bda (master)
 $ git rm README.md
 fatal: pathspec 'README.md' did not match any files
@@ -112,7 +114,7 @@ To https://github.com/Bhadra-K/sample.git
 
 
 
-Merge branches main and master
+--->Merge branches main and master
 
 C030@C088 MINGW64 ~/bdr/bda/sample (master)
 $ git checkout main
