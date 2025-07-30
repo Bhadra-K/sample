@@ -1,3 +1,4 @@
+push a file
 C030@C088 MINGW64 ~
 $ cd bdr
 
@@ -79,3 +80,28 @@ Everything up-to-date
 
 C030@C088 MINGW64 ~/bdr/bda (master)
 $
+
+
+
+delete a file 
+C030@C088 MINGW64 ~/bdr/bda (master)
+$ git rm README.md
+fatal: pathspec 'README.md' did not match any files
+
+C030@C088 MINGW64 ~/bdr/bda (master)
+$ git commit -m "Delete README.md"
+[master a59b837] Delete README.md
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 README.md
+
+C030@C088 MINGW64 ~/bdr/bda (master)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 229 bytes | 229.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Bhadra-K/sample.git
+   823ecd8..a59b837  master -> master
