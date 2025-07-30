@@ -1,4 +1,4 @@
-push a file
+Push a file
 C030@C088 MINGW64 ~
 $ cd bdr
 
@@ -83,7 +83,9 @@ $
 
 
 
-delete a file 
+
+
+Delete a file 
 C030@C088 MINGW64 ~/bdr/bda (master)
 $ git rm README.md
 fatal: pathspec 'README.md' did not match any files
@@ -105,3 +107,55 @@ Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/Bhadra-K/sample.git
    823ecd8..a59b837  master -> master
+
+
+
+
+
+Merge branches main and master
+
+C030@C088 MINGW64 ~/bdr/bda/sample (master)
+$ git checkout main
+branch 'main' set up to track 'origin/main'.
+Switched to a new branch 'main'
+
+C030@C088 MINGW64 ~/bdr/bda/sample (main)
+$ git pull origin main
+From https://github.com/Bhadra-K/sample
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+C030@C088 MINGW64 ~/bdr/bda/sample (main)
+$ git merge master
+Updating 6c97ba6..a30f151
+Fast-forward
+ README.md |   1 -
+ git.txt   | 107 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ sum.c     |  10 ++++++
+ 3 files changed, 117 insertions(+), 1 deletion(-)
+ delete mode 100644 README.md
+ create mode 100644 git.txt
+ create mode 100644 sum.c
+
+C030@C088 MINGW64 ~/bdr/bda/sample (main)
+$ git add git.txt
+
+C030@C088 MINGW64 ~/bdr/bda/sample (main)
+$ git commit
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C030@C088 MINGW64 ~/bdr/bda/sample (main)
+$ git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Bhadra-K/sample.git
+   6c97ba6..a30f151  main -> main
+
+C030@C088 MINGW64 ~/bdr/bda/sample (main)
+$ git push
+Everything up-to-date
+
+
